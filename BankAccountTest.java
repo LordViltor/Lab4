@@ -10,19 +10,21 @@ public class BankAccountTest {
 		Random r = new Random();
 		
 		
-		args1[3] = new CheckingAccount();
+		args1 = new CheckingAccount[3];
 		
 		for(int i = 0; i < 3; i++) {
+			args1[i] = new CheckingAccount();
 			args1[i].accountNo = i;
 			args1[i].balance = 20 + (100 - 20) * r.nextDouble();
 			args1[i].fee = 1 + (5 - 1) * r.nextDouble();
 		}
 		
-	    args2[2] = new SavingsAccount();
+	    args2 = new SavingsAccount[2];
 		for(int i = 0; i < 2; i++) {
-		args2[i].accountNo = i;
-		args2[i].balance = 20 + (100 - 20) * r.nextDouble();
-		args2[i].interestRate = 0.02 + (0.10 - 0.02) * r.nextDouble();
+			args2[i] = new SavingsAccount();
+			args2[i].accountNo = i;
+			args2[i].balance = 20 + (100 - 20) * r.nextDouble();
+			args2[i].interestRate = 0.02 + (0.10 - 0.02) * r.nextDouble();
 		}
 	}
 
